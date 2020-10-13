@@ -6,12 +6,12 @@ let background_palette; // red and green
 
 let jingle_bells, jingle_bells_hardstyle;
 let mouse_pressed = false;
+let sound_loaded = false;
 
 function preload() {
     soundFormats('mp3');
     jingle_bells = loadSound('assets/jingle_bells.mp3');
-    jingle_bells_hardstyle = loadSound('assets/jingle_bells_hardstyle.mp3');
-
+    jingle_bells_hardstyle = loadSound('assets/jingle_bells_hardstyle.mp3', fullyLoaded);
 }
 
 function setup() {
@@ -30,7 +30,7 @@ function setup() {
   if (windowWidth > 600) {
     santas_number = 50;
   } else {
-    santas_number = 25;
+    santas_number = 20;
   }
 
   for (let i = 0; i < santas_number; i++) {
@@ -83,14 +83,14 @@ class Santa {
       this.scl = map(this.distance, 0, 10, 1, 0.25);
       this.max_force = 5;
       this.max_acceleration = 0.5;
-      this.max_velocity = 20;
+      this.max_velocity = 10;
       this.speed = map(this.distance, 0, 10, 5, 1);
       this.max_y = 2 * this.scl;
     } else {
       this.scl = map(this.distance, 0, 10, 0.75, 0.2);
-      this.max_force = 5;
-      this.max_acceleration = 0.25;
-      this.max_velocity = 10;
+      this.max_force = 7;
+      this.max_acceleration = 0.3;
+      this.max_velocity = 7;
       this.speed = map(this.distance, 0, 10, 2.5, 0.5);
       this.max_y = this.scl;
     }
@@ -136,17 +136,21 @@ class Santa {
 
 
 function mousePressed() {
+  if (!sound_loaded) return;
   mouse_pressed = true;
-  jingle_bells_hardstyle.loop();
+
   jingle_bells.pause();
+  jingle_bells_hardstyle.loop();
 }
 
 function mouseReleased() {
+  if (!sound_loaded) return;
   mouse_pressed = false;
-  jingle_bells.loop();
+
   jingle_bells_hardstyle.pause();
+  jingle_bells.loop();
 }
 
-function mouseMoved() {
-
+function fullyLoaded() {
+  sound_loaded = true;
 }

@@ -4,6 +4,10 @@ body, body * {
   overflow: hidden;
 }
 
+a {
+  color: white;
+}
+
 @font-face {
   font-family: StNicholas;
   src: url(stnicholas.ttf);
@@ -22,6 +26,17 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+.merrychristmas {
+  position: absolute;
+
+  width: 100vw;
+  top: 45vh;
+  text-align: center;
+  font-size: 5vh;
+
+  user-select: none;
 }
 
 .loading {
@@ -64,29 +79,39 @@ body {
 
   font-size: 5vh;
   font-family: inherit;
-  width: 48vw;
-  left: 26vw;
-  bottom: 10vh;
+
+  transform: translateX(-50%);
+  left: 50vw;
+  bottom: 8vh;
 
   background-color: inherit;
   color: inherit;
 
   border: 1px solid white;
+  padding: 1.5vw;
   line-height: 120%;
   display: none;
 }
 
-.instructions {
+.footer {
   position: absolute;
   z-index: 20;
 
   display: none;
-  font-size: 5vh;
-  bottom: 5vh;
+  font-size: 3vh;
+  bottom: 0vh;
   width: 100vw;
 
   text-align: center;
   color: inherit;
+}
+
+.instructions {
+  padding-bottom: 3vh;
+}
+
+.credits {
+  padding-bottom: 3vh;
 }
 
 .desktop {
@@ -99,16 +124,27 @@ body {
     top: 20vh;
   }
 
+  .footer {
+    font-size: 7vh;
+  }
+
+   .merrychristmas {
+     top: 35vh;
+     font-size: 15vh;
+   }
+
   .loading {
     font-size: 7vh;
-    bottom: 20vh;
+    bottom: 15vh;
   }
 
   .okbutton {
     font-size: 7vh;
-    bottom: 20vh;
-    width: 15vw;
-    left: 42.5vw;
+    bottom: 15vh;
+  }
+
+  .instructions {
+    padding-bottom: 1vh;
   }
 
   .desktop {

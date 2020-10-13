@@ -1,13 +1,15 @@
 let check_loaded;
 let started;
+let click_counter;
 
 $(document).ready(function () {
   check_loaded = setInterval(check, 100);
   started = false;
+  click_counter = 0;
 
   $(".okbutton").click(function () {
     $(".container").hide();
-    $(".instructions").css({
+    $(".footer").css({
       "display": "inline-block"
     });
     started = true;
@@ -15,7 +17,11 @@ $(document).ready(function () {
 
   $("#sketch").click(function () {
     if (!started) return;
-      $(".instructions").delay(5000).fadeOut(3000);
+
+
+    $(".instructions").delay(2500).fadeOut(1000);
+    $(".merrychristmas").delay(2500).fadeOut(1000);
+
     })
 });
 
