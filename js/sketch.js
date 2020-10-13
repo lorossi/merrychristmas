@@ -82,14 +82,14 @@ class Santa {
     if (windowWidth > 600) {
       this.scl = map(this.distance, 0, 10, 1, 0.25);
       this.max_force = 5;
-      this.max_acceleration = 0.5;
+      this.max_acceleration = 0.25;
       this.max_velocity = 10;
       this.speed = map(this.distance, 0, 10, 5, 1);
       this.max_y = 2 * this.scl;
     } else {
       this.scl = map(this.distance, 0, 10, 0.75, 0.2);
-      this.max_force = 7;
-      this.max_acceleration = 0.3;
+      this.max_force = 2;
+      this.max_acceleration = 0.25;
       this.max_velocity = 7;
       this.speed = map(this.distance, 0, 10, 2.5, 0.5);
       this.max_y = this.scl;

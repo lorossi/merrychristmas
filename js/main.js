@@ -18,10 +18,8 @@ $(document).ready(function () {
   $("#sketch").click(function () {
     if (!started) return;
 
-
     $(".instructions").delay(2500).fadeOut(1000);
     $(".merrychristmas").delay(2500).fadeOut(1000);
-
     })
 });
 
