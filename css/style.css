@@ -76,6 +76,23 @@ body {
   display: none;
 }
 
+.instructions {
+  position: absolute;
+  z-index: 20;
+
+  display: none;
+  font-size: 5vh;
+  bottom: 5vh;
+  width: 100vw;
+
+  text-align: center;
+  color: inherit;
+}
+
+.desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   .disclaimer {
     font-size: 7vh;
@@ -92,5 +109,13 @@ body {
     bottom: 20vh;
     width: 15vw;
     left: 42.5vw;
+  }
+
+  .desktop {
+    display: inline-block;
+  }
+
+  .mobile {
+    display: none;
   }
 }
