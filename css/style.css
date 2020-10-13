@@ -1,0 +1,96 @@
+body, body * {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: StNicholas;
+  src: url(stnicholas.ttf);
+}
+
+body {
+  font-family: StNicholas;
+  background-color: #B3000C;
+  color: white;
+}
+
+#sketch {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.loading {
+  position: absolute;
+  font-size: 5vh;
+  width: 100vw;
+  bottom: 10vh;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+  z-index: 15;
+}
+
+.container {
+  z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #B3000C;
+}
+
+.disclaimer {
+  position: absolute;
+  z-index: 20;
+
+  width: 80vw;
+  top: 10vh;
+  left: 10vw;
+  font-size: 5vh;
+
+  background-color: inherit;
+  text-align: center;
+}
+
+.okbutton {
+  position: absolute;
+  z-index: 20;
+
+  font-size: 5vh;
+  font-family: inherit;
+  width: 48vw;
+  left: 26vw;
+  bottom: 10vh;
+
+  background-color: inherit;
+  color: inherit;
+
+  border: 1px solid white;
+  line-height: 120%;
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .disclaimer {
+    font-size: 7vh;
+    top: 20vh;
+  }
+
+  .loading {
+    font-size: 7vh;
+    bottom: 20vh;
+  }
+
+  .okbutton {
+    font-size: 7vh;
+    bottom: 20vh;
+    width: 15vw;
+    left: 42.5vw;
+  }
+}
