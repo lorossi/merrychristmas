@@ -112,6 +112,8 @@ body {
 
 .credits {
   padding-bottom: 3vh;
+
+  user-select: none;
 }
 
 .desktop {
